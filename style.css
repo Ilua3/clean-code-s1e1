@@ -18,8 +18,9 @@ body {
 }
 
 @media (max-width:768px) {
-  .heder { text-align: center;
-}
+  .heder {
+     text-align: center;
+  }
 }
 .work-place {
   display: block;
