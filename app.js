@@ -11,7 +11,7 @@
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var completedTasksHolder=document.getElementById("compl-task");//compl-task
 
 
 //New task list item
@@ -85,11 +85,11 @@ var editTask=function(){
   var editInput=listItem.querySelector('input[type=text]');
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".edit");
-  var containsClass=listItem.classList.contains("editMode");
-  //If class of the parent is .editmode
+  var containsClass=listItem.classList.contains("e-Mode");
+  //If class of the parent is .e-Mode
   if(containsClass){
 
-      //switch to .editmode
+      //switch to .e-Mode
       //label becomes the inputs value.
       label.innerText=editInput.value;
       editBtn.innerText="Edit";
@@ -98,8 +98,8 @@ var editTask=function(){
       editBtn.innerText="Save";
     }
 
-  //toggle .editmode on the parent.
-  listItem.classList.toggle("editMode");
+  //toggle .e-Mode on the parent.
+  listItem.classList.toggle("e-Mode");
 };
 
 
@@ -119,7 +119,7 @@ var deleteTask=function(){
 var taskCompleted=function(){
   console.log("Complete Task...");
 
-  //Append the task list item to the #completed-tasks
+  //Append the task list item to the #compl-task
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
