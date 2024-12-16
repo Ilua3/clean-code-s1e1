@@ -13,7 +13,7 @@ body {
 .heder img {
   width: 100%;
 }
-.heder .more_inf {
+.more_inf {
   font-family: fantasy, cursive;
 }
 
@@ -88,7 +88,7 @@ label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
   width: 318px;
 }
 
@@ -128,7 +128,7 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#compl-task label {
+#compl-task label {
   text-decoration: line-through
   color: #888;
 }
